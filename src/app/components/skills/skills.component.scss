@@ -1,0 +1,37 @@
+@import '../../app.component.scss';
+
+h2{
+    border-bottom: 2px solid white;
+    width:80%;
+    text-align:center;
+}
+.container-work{
+    background-image: url('../../../assets/img/header-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container-work-shadow{
+    background-color:rgba(1,1,1,.75);
+}
+i{
+    font-size:20px;
+    min-width:30px;
+    text-align:center;
+}
+.table-desktop{
+    display:none;
+}
+.table-mobile{
+    display:block;
+}
+@media screen and (min-width:700px){
+    .table-desktop{
+        display:table !important;
+    }
+    .table-mobile{
+        display:none !important;
+    }
+}

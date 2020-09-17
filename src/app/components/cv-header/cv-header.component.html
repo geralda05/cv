@@ -1,0 +1,34 @@
+<div class="w-100 d-flex header-container">
+    <div class="w-100 d-flex align-items-center justify-content-center header-shadow">
+        <div class="w-100">
+            <p class="idioma text-white w-100 text-right mb-0"><button class="btn text-white mt-2 mr-2" (click)="changeLanguage()"><ng-container *ngIf="globalS.language === 'spanish'">English Version</ng-container><ng-container *ngIf="globalS.language === 'english'">Español</ng-container></button></p>
+            <p class="mb-0 text-center text-white title">Gerald Leonel Alarcón</p>
+            <div class="w-100 text-center container-img">
+                <img src="../../../assets/img/person.jpg" class="header-img" />
+            </div>
+            <p class="mb-0 text-center text-white title">{{jobTitle[globalS.language]}}</p>
+            <div class="w-100 text-center mt-2 last">
+                <a [href]="'../../../assets/CV 2020'+globalS.language+'.pdf'" target="_self" download>
+                    <button class="btn btn-light mr-3 px-3 py-2"><i class="fas fa-file-download mr-2"></i>{{PDFbutton[globalS.language]}}</button>
+                </a>
+                <button class="btn btn-light mr-3 px-3 py-2" (click)="alertNoAvailable()"><i class="fas fa-user-check mr-2"></i>{{letterbutton[globalS.language]}}</button>
+                <a href="https://wa.me/56964702103" target="_blank">
+                    <button class="btn btn-light px-3 py-2"><i class="fab fa-whatsapp mr-2"></i>{{whatsappbutton[globalS.language]}}</button>
+                </a>
+            </div>
+            <nav id="myHeader" class="navbar navbar-expand-lg navbar-dark w-100 position-absolute">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mx-auto">
+                    <li class="nav-item" *ngFor="let item of navItems">
+                      <a href="#" [attr.data-ancla]="item.link" class="nav-link ancla" href="#">{{item.text[globalS.language]}}</a>
+                    </li>
+                    <li class="mx-auto nav-item nav-link" (click)="changeLanguage()">Language</li>
+                  </ul>
+                </div>
+              </nav>
+        </div>    
+    </div>
+</div>

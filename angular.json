@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "curriculum-gerald"
+    }
+  },
+  "defaultProject": "curriculum-gerald",
+  "cli": {
+    "analytics": "bed12fb2-98ae-4672-8909-5feca196f754"
+  }
 }

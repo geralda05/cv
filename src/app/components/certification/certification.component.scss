@@ -1,0 +1,43 @@
+@import '../../app.component.scss';
+
+
+.certifications-container{
+    background-image: url('../../../assets/img/header-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.certifications-container-shadow{
+    background-color:rgba(1,1,1,.75);
+}
+
+h2{
+    width:80%;
+    border-bottom: 2px solid white;
+}
+.card-hover{
+    height:150px;
+    position:relative;
+}
+.container-animation{
+    height:0px;
+    transition: height ease .5s, padding .5s ease;
+    overflow:hidden;
+    width:0px;
+}
+.card-hover:hover .container-animation{
+    height:150px;
+    background-color:rgba(1,1,1,.80);
+    width:100% !important;
+    position:absolute;
+    padding:1.2rem;
+    text-align:center;
+}
+.card-hover .card{
+    transition: height ease .5s, padding .5s ease;
+}
+.card-hover:hover .card{
+    color: white !important;
+}

@@ -1,0 +1,29 @@
+@import '../../app.component.scss';
+
+.container-work{
+    background-image: url('../../../assets/img/header-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.card-map{
+    border:2px solid white;
+    color: white;
+    border-radius:15px;
+}
+
+.container-work-shadow{
+    background-color:rgba(1,1,1,.75);
+}
+
+.icon-grid{
+    font-size:30px;
+    display:inline-block;
+    padding-right:10px;
+}
+.icon-grid i{
+    font-size:30px;
+    display:inline-block;
+    color: white;
+}

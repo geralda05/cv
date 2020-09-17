@@ -1,0 +1,26 @@
+<a id="workinfo"></a>
+<div class="w-100 container-work d-flex" [style.background-image]="'url(../../../assets/img/courses' + numberImg + '.jpg)'">
+    <div class="w-100 container-work-shadow d-flex justify-content-center align-items-center">
+        <div class="w-100 mw-1100px py-5">
+            <h2 class="py-2 pl-3 mb-3 text-white">{{title[globalS.language]}}</h2>
+            <div class="container">
+                <ul class="timeline">
+                    <li *ngFor="let item of experiences; let i = index" [ngClass]="{'timeline-inverted': (i % 2 != 0)}">
+                      <div class="timeline-badge"><i class="fas fa-briefcase"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title">{{item.title[globalS.language]}}: {{formatDate(item.time[0], item.time[1])}}</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p style="cursor: pointer" class="mb-0"><i class="fas fa-university mr-2"></i><a [href]="item.company.web" target="_blank">{{item.company[globalS.language]}}</a></p>
+                            <p><i class="fas fa-map-marker-alt mr-2"></i>{{item.place[globalS.language]}}</p>
+                            <p><i class="fas fa-user-graduate mr-2"></i>{{item.dateStart.locale(takeLanguage()).format('MMMM') | titlecase}} {{item.dateStart.locale(takeLanguage()).format('YYYY')}} - <ng-container *ngIf="item.dateEnd === null"><ng-container *ngIf="globalS.language === 'spanish'">Actualidad</ng-container><ng-container *ngIf="globalS.language === 'english'">Present</ng-container></ng-container><ng-container *ngIf="item.dateEnd !== null">{{item.dateEnd.locale(takeLanguage()).format('MMMM') | titlecase}} {{item.dateEnd.locale(takeLanguage()).format('YYYY')}}</ng-container></p>
+                            <p><i class="fas fa-file-alt mr-2"></i>{{item.description[globalS.language]}}</p>
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

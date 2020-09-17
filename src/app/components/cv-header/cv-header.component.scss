@@ -1,0 +1,68 @@
+@import '../../app.component.scss';
+
+.header-container{
+    min-height:100vh;
+    background-image: url('../../../assets/img/header-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.idioma{
+    position:absolute;
+    top: 0;
+}
+.header-shadow{
+    background-color: rgba(1,1,1,.75)
+}
+.header-img{
+    width:200px;
+    height:200px;
+    border-radius:100%;
+    border:5px solid white;
+    margin-top:-100px;
+}
+.container-img{
+    margin-top:100px;
+    border-top:5px solid white;
+}
+
+.title{
+    font-size:7vw;
+    font-weight:400;
+}
+@media screen and (min-width:500px) and (max-width:1199px){
+    .title{
+        font-size:5vw !important;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .title{
+        font-size: 60px !important;
+    }
+}
+
+button{
+    background-color: transparent;
+    color: white;
+    border-radius:10px;
+}
+nav{
+    bottom:0
+}
+last{
+    margin-bottom:60px;
+}
+.sticky{
+    position:fixed !important;
+    top:0px !important;
+    bottom: revert !important;
+    width:100%;
+    background: black;
+    z-index:1000,
+
+}
+.sticky li{
+    border-bottom:2px solid white;
+}

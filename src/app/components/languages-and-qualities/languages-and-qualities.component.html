@@ -1,0 +1,92 @@
+<a id="qualities"></a>
+<div class="w-100 container-work d-flex" [style.background-image]="'url(../../../assets/img/qualities' + numberImg + '.jpg)'">
+    <div class="w-100 container-work-shadow d-flex justify-content-center align-items-center">
+        <div class="w-100 mw-1100px py-5">
+            <h2 class="py-2 pl-3 mb-3 text-white ml-auto">{{title[globalS.language]}}</h2>
+            <div class="row mt-3">
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <p class="title-s mb-3 text-center">{{personal[globalS.language]}}</p>
+                    <div class="w-100 mt-5 position-relative container-item" *ngFor="let item of personalQualities; let i = index">
+                        <div class="p-absolute p-line" *ngIf="i !== (personalQualities.length-1)"></div>
+                        <div class="card-map">
+                            <div class="card-body">
+                                <div class="card-icon text-center">
+                                    <div class="icon-container">
+                                        <i [ngClass]="item.icon"></i>
+                                    </div>
+                                </div>
+                                <p class="mb-0 pt-2 text-center">{{item.text[globalS.language]}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <p class="title-s mb-3 text-center">{{language[globalS.language]}}</p>
+                    <div class="row m-0 p-0" *ngFor="let languageItem of languages">
+                        <div class="col-6">
+                            <p class="text-white title">{{languageItem.title[globalS.language]}}</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-white mb-0" style="white-space: nowrap"><i class="fas fa-globe mr-2"></i>{{languageItem.type[globalS.language]}}</p>
+                            <p class="text-white mb-0" style="white-space: nowrap"><i class="fas fa-language mr-2"></i>{{languageItem.level[globalS.language]}}</p>
+                        </div>
+                        <div class="col-12">
+                            <table class="w-100">
+                                <tbody>
+                                    <tr>
+                                        <th class="text-right text-white pb-3" style="white-space: nowrap">{{languageItem.reading[globalS.language]}}<i [ngClass]="'fas fa-book-reader mx-2'"></i></th>
+                                        <th class="text-left w-100 pb-3">
+                                            <div class="progress w-100" style="height:25px">
+                                                <div class="progress-bar text-left pl-2" role="progressbar" [ngStyle]="{'width': languageItem.reading.value+'%'}" [attr.aria-valuenow]="languageItem.reading.value" aria-valuemin="0" aria-valuemax="100">{{languageItem.reading.value}}%</div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right text-white pb-3" style="white-space: nowrap">{{languageItem.written[globalS.language]}}<i [ngClass]="'fas fa-pencil-alt mx-2'"></i></th>
+                                        <th class="text-left w-100 pb-3">
+                                            <div class="progress w-100" style="height:25px">
+                                                <div class="progress-bar text-left pl-2" role="progressbar" [ngStyle]="{'width': languageItem.written.value+'%'}" [attr.aria-valuenow]="languageItem.written.value" aria-valuemin="0" aria-valuemax="100">{{languageItem.written.value}}%</div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right text-white pb-3" style="white-space: nowrap">{{languageItem.oral[globalS.language]}}<i [ngClass]="'fas fa-sign-language mx-2'"></i></th>
+                                        <th class="text-left w-100 pb-3">
+                                            <div class="progress w-100" style="height:25px">
+                                                <div class="progress-bar text-left pl-2" role="progressbar" [ngStyle]="{'width': languageItem.oral.value+'%'}" [attr.aria-valuenow]="languageItem.oral.value" aria-valuemin="0" aria-valuemax="100">{{languageItem.oral.value}}%</div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right text-white pb-3" style="white-space: nowrap">{{languageItem.listening[globalS.language]}}<i [ngClass]="'fas fa-deaf mx-2'"></i></th>
+                                        <th class="text-left w-100 pb-3">
+                                            <div class="progress w-100" style="height:25px">
+                                                <div class="progress-bar text-left pl-2" role="progressbar" [ngStyle]="{'width': languageItem.listening.value+'%'}" [attr.aria-valuenow]="languageItem.listening.value" aria-valuemin="0" aria-valuemax="100">{{languageItem.listening.value}}%</div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-4">
+                    <p class="title-s mb-3 text-center">Labor Qualities</p>
+                    <div class="w-100 mt-5 position-relative container-item" *ngFor="let item of workQualities; let i = index">
+                        <div class="p-absolute p-line" *ngIf="i !== (workQualities.length-1)"></div>
+                        <div class="card-map">
+                            <div class="card-body">
+                                <div class="card-icon text-center">
+                                    <div class="icon-container">
+                                        <i [ngClass]="item.icon"></i>
+                                    </div>
+                                </div>
+                                <p class="mb-0 pt-2 text-center">{{item.text[globalS.language]}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

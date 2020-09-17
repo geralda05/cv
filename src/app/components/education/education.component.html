@@ -1,0 +1,30 @@
+<a id="academicinfo"></a>
+<div class="education-container w-100 d-flex" [style.background-image]="'url(../../../assets/img/study' + numberImg + '.jpg)'">
+    <div class="education-container-shadow w-100 p-3 d-flex align-items-center justify-content-center">
+        <div class="mw-1100px py-4">
+            <h2 class="advent text-white py-2 pl-3 mb-3">{{title[globalS.language]}}</h2>
+            <div class="container">
+                <ul class="timeline">
+                    <li *ngFor="let item of experiences; let i = index" [ngClass]="{'timeline-inverted': (i % 2 != 0)}">
+                      <div class="timeline-badge" style="background-color: white; color: black !important"><i [ngClass]="item.icon" style="color: black !important"></i></div>
+                      <div class="timeline-panel">
+                        <div class="timeline-heading">
+                          <h4 class="timeline-title">{{item.title[globalS.language]}}</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p><i class="fas fa-university mr-2"></i>{{item.school[globalS.language]}}</p>
+                            <p><i class="fas fa-map-marker-alt mr-2"></i>{{item.place[globalS.language]}}</p>
+                            <p><i class="fas fa-user-graduate mr-2"></i><ng-container *ngIf="globalS.language === 'spanish'">Titulación</ng-container><ng-container *ngIf="globalS.language === 'english'">Graduation</ng-container>: {{item.culmination[globalS.language]}}</p>
+                            <p><i class="fas fa-file-alt mr-2"></i>{{item.credential[globalS.language]}}</p>
+                            <p *ngIf="item.additional" style="margin-bottom:5px"><i class="fas fa-trophy mr-2"></i>{{item.additional[globalS.language]}}</p>
+                            <a href="http://geraldalarcon.com.ve/SistemaAcademico.pdf" target="_blank">
+                              <p *ngIf="item.thesis"><i class="fas fa-project-diagram mr-2"></i>{{item.thesis[globalS.language]}}</p>                            
+                            </a>
+                        </div>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

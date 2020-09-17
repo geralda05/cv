@@ -1,0 +1,66 @@
+@import '../../app.component.scss';
+
+h2{
+    border-bottom: 2px solid white;
+    width:80%;
+    text-align:center;
+}
+.container-work{
+    background-image: url('../../../assets/img/header-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.card-map{
+    border:2px solid white;
+    color: white;
+    border-radius:15px;
+}
+
+.container-work-shadow{
+    background-color:rgba(1,1,1,.75);
+}
+.p-line{
+    border-left:2px solid white;
+    position: absolute;
+    top: 100%;
+    left:50%;
+    height:70px;
+}
+.container-item{
+    margin-bottom:70px;
+}
+i{
+    font-size:20px;
+    min-width:30px;
+    text-align:center;
+}
+.title-s{
+    font-family: 'Shadows Into Light', cursive;
+    color:white;
+    font-size:25px;
+}
+.card-icon{
+    position:relative;
+}
+.icon-container{
+    background-color:white;
+    color: black;
+    border-radius: 100%;
+    padding:10px;
+    left:calc(50% - 1.6rem);
+    top:-50px;
+    position:absolute;
+    height:50px;
+    width:50px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.title{
+    border-bottom:2px solid white;
+    text-align:center;
+    font-size:20px;
+    padding-bottom:10px;
+}

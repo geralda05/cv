@@ -1,0 +1,45 @@
+<a id="certifications"></a>
+<div class="certifications-container w-100 d-flex" [style.background-image]="'url(../../../assets/img/courses' + numberImg + '.jpg)'">
+    <div class="certifications-container-shadow w-100 p-3 d-flex align-items-center justify-content-center">
+        <div class="mw-1100px py-4">
+            <h2 class="advent text-white py-2 pl-3 mb-3 text-center">{{titleCourses[globalS.language]}}</h2>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 d-flex" *ngFor="let item of courses">
+                    <div class="card-hover d-flex w-100">
+                        <div class="card w-100">
+                            <div class="card-body d-flex justify-content-center align-items-center">
+                                <div class="w-100">
+                                    <p class="card-title font-weight-bold text-center">{{item.name[globalS.language]}}</p>
+                                    <p class="mb-0"><i class="fas fa-university mr-2"></i>{{item.place[globalS.language]}}</p>
+                                    <p class="mb-0"><i class="fas fa-university mr-2"></i>{{item.time[globalS.language]}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-animation d-flex justify-content-center align-items-center">
+                            <p class="mb-0 w-100 text-white">{{item.cover[globalS.language]}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="advent text-white py-2 pl-3 mb-3 ml-auto text-center mt-5">{{titleMemberships[globalS.language]}}</h2>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3 d-flex" *ngFor="let item of memberships">
+                    <div class="card-hover d-flex w-100">
+                        <div class="card w-100">
+                            <div class="card-body d-flex justify-content-center align-items-center">
+                                <div class="w-100">
+                                    <p class="card-title font-weight-bold text-center">{{item.name[globalS.language]}}</p>
+                                    <p class="mb-0"><i class="fas fa-university mr-2"></i>{{item.year}}</p>
+                                    <p class="mb-0"><i class="fas fa-map-marker-alt mr-2"></i>{{item.place}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-animation d-flex justify-content-center align-items-center">
+                            <p class="mb-0 w-100 text-white">{{item.cover[globalS.language]}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
