@@ -12,7 +12,7 @@ import { CertificationComponent } from './components/certification/certification
 import { SkillsComponent } from './components/skills/skills.component';
 import { LanguagesAndQualitiesComponent } from './components/languages-and-qualities/languages-and-qualities.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { NgwWowModule } from 'ngx-wow';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,8 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgwWowModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

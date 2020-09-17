@@ -2,10 +2,10 @@
 <div class="education-container w-100 d-flex" [style.background-image]="'url(../../../assets/img/study' + numberImg + '.jpg)'">
     <div class="education-container-shadow w-100 p-3 d-flex align-items-center justify-content-center">
         <div class="mw-1100px py-4">
-            <h2 class="advent text-white py-2 pl-3 mb-3">{{title[globalS.language]}}</h2>
+            <h2 class="advent text-white py-2 pl-3 mb-3 wow bounceInDown" data-wow-duration="2s">{{title[globalS.language]}}</h2>
             <div class="container">
                 <ul class="timeline">
-                    <li *ngFor="let item of experiences; let i = index" [ngClass]="{'timeline-inverted': (i % 2 != 0)}">
+                    <li *ngFor="let item of experiences; let i = index" [ngClass]="{'timeline-inverted': (i % 2 != 0), 'slideInLeft':(i % 2 == 0), 'slideInRight':(i % 2 != 0)}" class="wow" data-wow-duration="2s">
                       <div class="timeline-badge" style="background-color: white; color: black !important"><i [ngClass]="item.icon" style="color: black !important"></i></div>
                       <div class="timeline-panel">
                         <div class="timeline-heading">

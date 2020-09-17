@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {NgwWowService} from 'ngx-wow';
+import { WOW } from 'wowjs/dist/wow.min';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'curriculum-gerald';
+
+  constructor(private wowService: NgwWowService) {
+    this.wowService.init();
+    new WOW().init();
+  }
+
+
 }

@@ -2,15 +2,15 @@
 <div class="w-100 container-work d-flex" [style.background-image]="'url(../../../assets/img/skills' + numberImg + '.jpg)'">
     <div class="w-100 container-work-shadow d-flex justify-content-center align-items-center">
         <div class="w-100 mw-1100px py-5" style="overflow:hidden">
-            <h2 class="py-2 pl-3 mb-3 text-white">{{title[globalS.language]}}</h2>
+            <h2 class="py-2 pl-3 mb-3 text-white wow slideInLeft" data-wow-duration="2s">{{title[globalS.language]}}</h2>
             <div class="px-3">
-                <h3 class="text-center text-white mt-4">{{subtitle[globalS.language]}}</h3>
+                <h3 class="text-center text-white mt-4 wow slideInRight" data-wow-duration="2s">{{subtitle[globalS.language]}}</h3>
                 <div class="row m-0 p-0">
                     <table class="w-100 table-desktop">
                         <tbody>
-                            <tr *ngFor="let skill of skills">
-                                <th class="text-right text-white pb-3" style="white-space: nowrap">{{skill.name[globalS.language]}}<i [ngClass]="skill.icon+' mx-2'"></i></th>
-                                <th class="text-left w-100 pb-3">
+                            <tr *ngFor="let skill of skills; let i = index">
+                                <th class="text-right text-white pb-3 wow slideInLeft" [attr.data-wow-duration]="(i+1)+'s'" style="white-space: nowrap">{{skill.name[globalS.language]}}<i [ngClass]="skill.icon+' mx-2'" class="wow bounceInDown" data-wow-duration="2s"></i></th>
+                                <th class="text-left w-100 pb-3 wow slideInRight" data-wow-duration="2s">
                                     <div class="progress w-100" style="height:25px">
                                         <div class="progress-bar text-left pl-2" role="progressbar" [ngStyle]="{'width': skill.percentage+'%'}" [attr.aria-valuenow]="skill.percentage" aria-valuemin="0" aria-valuemax="100">{{skill.percentage}}%</div>
                                     </div>

@@ -45,6 +45,10 @@ export class CvHeaderComponent implements OnInit {
     }
   }
 
+  public lang = {
+    spanish:'English',
+    english:'Español'
+  }
   public navItems = [{
     text:{
       spanish:'Sobre mi',

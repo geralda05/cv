@@ -66,3 +66,9 @@ last{
 .sticky li{
     border-bottom:2px solid white;
 }
+.lang-item{
+    display:none;
+}
+.sticky .lang-item{
+    display:block !important;
+}

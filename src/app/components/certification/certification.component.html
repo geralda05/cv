@@ -2,9 +2,9 @@
 <div class="certifications-container w-100 d-flex" [style.background-image]="'url(../../../assets/img/courses' + numberImg + '.jpg)'">
     <div class="certifications-container-shadow w-100 p-3 d-flex align-items-center justify-content-center">
         <div class="mw-1100px py-4">
-            <h2 class="advent text-white py-2 pl-3 mb-3 text-center">{{titleCourses[globalS.language]}}</h2>
+            <h2 class="advent text-white py-2 pl-3 mb-3 text-center wow slideInLeft" data-wow-duration="2s">{{titleCourses[globalS.language]}}</h2>
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 d-flex" *ngFor="let item of courses">
+                <div class="col-12 col-sm-6 col-md-4 d-flex wow bounceInRight" data-wow-duration="2s" *ngFor="let item of courses">
                     <div class="card-hover d-flex w-100">
                         <div class="card w-100">
                             <div class="card-body d-flex justify-content-center align-items-center">
@@ -21,9 +21,9 @@
                     </div>
                 </div>
             </div>
-            <h2 class="advent text-white py-2 pl-3 mb-3 ml-auto text-center mt-5">{{titleMemberships[globalS.language]}}</h2>
+            <h2 class="advent text-white py-2 pl-3 mb-3 ml-auto text-center mt-5 wow slideInRight" data-wow-duration="2s">{{titleMemberships[globalS.language]}}</h2>
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-3 d-flex" *ngFor="let item of memberships">
+                <div class="col-12 col-sm-6 col-md-3 d-flex wow bounceInLeft" data-wow-duration="2s" *ngFor="let item of memberships">
                     <div class="card-hover d-flex w-100">
                         <div class="card w-100">
                             <div class="card-body d-flex justify-content-center align-items-center">
